@@ -1,0 +1,409 @@
+/*head */ 
+
+.site-header{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+/* Reset and base styles */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: black;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(112, 108, 108);
+    text-align: justify;
+}
+
+/* Navbar */
+.Navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+}
+
+/*logo */
+
+
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-family:cursive;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 20px;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.logo:hover{
+   background-color: aqua;
+   text-align: center;
+   transform: scale(1.05); 
+   color: #000000;
+
+}
+
+/* Navbar */
+
+.nav-links a {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a:hover {
+    color:#1abc9c;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #1abc9c;
+    color: white;
+    border-radius: 80px;
+}
+
+
+
+.hero span {
+    color: #fff700;
+}
+
+/* buttn */
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #1abc9c;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn:hover {
+  background-color: #121820;
+  transform: scale(1.07);
+}
+
+/* Section */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0,1);
+}
+
+
+
+/* Footer */
+footer{
+    background: #222;
+    color: white;
+    text-align:center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px){
+    .nav-links {
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+}
+
+/* Reset default styles */
+
+
+/* section glow */
+
+ section#projects.section{
+    margin-top: 30px;
+    padding: auto;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor:cell;
+    position:relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+section#projects.section::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+section#projects.section::before{
+    content:"";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFF800, #48FF00,
+        #00FFD5, #0028FF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transform: opacity .3s ease-in-out;
+    border-radius: 10px;
+     opacity: 0;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+
+}
+
+/* hover section  */
+section#projects.section:hover::before {
+    opacity: 1;
+}
+
+section#projects.section:active:after {
+ background: transparent;
+
+}
+
+section#projects.section:active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* complex here */
+
+/* button glow*/
+.btn1 {
+    margin-top: 30px;
+    padding: auto;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor:cell;
+    position:relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+.btn1::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.btn1::before{
+    content:"";
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFF800, #48FF00,
+        #00FFD5, #0028FF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transform: opacity .3s ease-in-out;
+    border-radius: 10px;
+     opacity: 0;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+
+}
+
+/* hover */
+.btn1:hover::before {
+    opacity: 1;
+}
+
+.btn1:active:after {
+ background: transparent;
+
+}
+
+.btn1:active {
+    color: #000;
+    font-weight: bold;
+}
+
+/* my custom buttons */
+.button-container {
+  text-align: center;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #0151ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #022d5a;
+  transform: scale(1.05);
+}
+
+
+.download-btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.download-btn:hover {
+background-color: #0056b3;
+text-align: center;
+ transform: scale(1.05);
+}
+
+/* Custom button section */
+
+.buttons{
+    padding: 50px;
+    text-align: center;
+}
+
+
+
+/* blog section */
+
+.left{
+    text-align: start;
+    font-size: large;
+    margin-top: 40px;
+}
+
+.para{
+    text-align: start;
+    padding: 40px;
+}
+
+.headblog{
+    text-align: center;
+    font-size: large;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+
+
+
+
+.sectionn {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    background-color: #333;
+}
+
+.project-gridd {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    margin-top: 30px;
+}
+
+.project-cardd {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0,1);
+}
